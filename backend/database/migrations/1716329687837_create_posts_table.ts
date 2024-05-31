@@ -8,7 +8,7 @@ export default class extends BaseSchema {
       table.increments('id').notNullable()
 
       table.string('title')
-      table.string('content')
+      table.text('content')
 
       table.integer('author_id').unsigned().references('users.id').onDelete('CASCADE')
 
